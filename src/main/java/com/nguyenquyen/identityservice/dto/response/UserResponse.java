@@ -1,6 +1,5 @@
-package com.nguyenquyen.identityservice.dto.request;
+package com.nguyenquyen.identityservice.dto.response;
 
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,8 +11,9 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserUpdateRequest {
-    @Size(min = 3, max = 15, message = "PASSWORD_INVALID")
+public class UserResponse {
+    private String id;
+    private String username;
     private String password;
     private String firstName;
     private String lastName;
