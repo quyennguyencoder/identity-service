@@ -1,6 +1,6 @@
 package com.nguyenquyen.identityservice.dto.response;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
+import java.util.Set;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,9 +11,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@JsonInclude(JsonInclude.Include.NON_NULL)
-public class ApiResponse<T> {
-    private int code;
-    private String message;
-    private T result;
+public class RoleResponse {
+    private String name;
+    private String description;
+    private Set<PermissionResponse> permissions;
 }

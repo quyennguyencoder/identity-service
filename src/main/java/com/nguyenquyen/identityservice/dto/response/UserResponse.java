@@ -1,11 +1,12 @@
 package com.nguyenquyen.identityservice.dto.response;
 
+import java.time.LocalDate;
+import java.util.Set;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
@@ -18,4 +19,5 @@ public class UserResponse {
     private String firstName;
     private String lastName;
     private LocalDate dob;
+    private Set<RoleResponse> roles;
 }
